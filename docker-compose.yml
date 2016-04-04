@@ -1,0 +1,10 @@
+ganglia:
+  image: kurthuwig/ganglia:latest
+  hostname: ganglia
+  ports:
+   - "127.0.0.1:80:80"
+   - "8649:8649"
+   - "8649:8649/udp"
+  volumes:
+   - ganglia_etc:/etc/ganglia
+   - ganglia_data:/var/lib/ganglia
